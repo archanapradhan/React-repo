@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  state = {
-    value: this.props.value
-    // tags: ["tag1", "tag2", "tag3"]
-  };
+  // state = {
+  //   value: this.props.counter.value
+  //   // tags: ["tag1", "tag2", "tag3"]
+  // };
 
   //--------Handling events and binding event handlers------------
   //Every handler should be defined in the constructor
@@ -25,12 +25,33 @@ class Counter extends Component {
   }; */
 
   //Updating the state, Passing Event Arguments
-  handleIncrement = () => {
-    this.setState({ value: this.state.value + 1 }); // this method tells react to get the DOM in sync with the virtual DOM
-  };
+  // handleIncrement = () => {
+  //   this.setState({ value: this.state.value + 1 }); // this method tells react to get the DOM in sync with the virtual DOM
+  // };
 
   //
 
+  render() {
+    return (
+      <div>
+        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+        <button
+          onClick={() => this.props.onIncrement(this.props.counter)}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
+        <button
+          onClick={() => this.props.onDelete(this.props.counter.id)}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
+        </button>
+      </div>
+    );
+  }
+
+  /* // This code was before we passed whole counter object as "counter={counter}"" in Counters.jsx
   render() {
     return (
       <div>
@@ -41,9 +62,15 @@ class Counter extends Component {
         >
           Increment
         </button>
+        <button
+          onClick={() => this.props.onDelete(this.props.id)}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
+        </button>
       </div>
     );
-  }
+  }*/
 
   /* //Updating the state, Passing Event Arguments
   handleIncrement = product => {
@@ -91,14 +118,14 @@ class Counter extends Component {
 
   //-----Conditional Rendering code ends------
   getBadgeClasses() {
-    debugger;
+    // debugger;
     let classes = "badge m-2 badge-";
-    classes += this.state.value === 0 ? "warning" : "primary";
+    classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }
 
   formatCount() {
-    const { value } = this.state;
+    const { value: value } = this.props.counter;
     return value === 0 ? "Zero" : value;
   }
 }
