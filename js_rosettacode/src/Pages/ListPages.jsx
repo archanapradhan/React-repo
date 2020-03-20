@@ -15,6 +15,9 @@ class ListPages extends Component {
             <Link to="/fibonacci">Fibonacci</Link>
           </li>
           <li>
+            <Link to="/change-return">Change return</Link>
+          </li>
+          <li>
             <Link to="/login-backend">login</Link>
           </li>
           <li>
