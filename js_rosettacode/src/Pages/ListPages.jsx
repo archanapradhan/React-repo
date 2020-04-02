@@ -18,6 +18,12 @@ class ListPages extends Component {
             <Link to="/change-return">Change return</Link>
           </li>
           <li>
+            <Link to="/user">User</Link>
+          </li>
+          <li>
+            <Link to="/BasicInputField">InputField</Link>
+          </li>
+          <li>
             <Link to="/login-backend">login</Link>
           </li>
           <li>

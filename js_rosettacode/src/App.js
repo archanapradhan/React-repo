@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import ListPages from "./Pages/ListPages";
 import PiCal from "./Pages/PiCalculator";
 import Fibonacci from "./Pages/Fibonacci";
+import UserOutput from "./CourseExercises/User/UserOutput";
+import InputAppComponent from "./CourseExercises/Input/InputAppComponent";
 
 export default function App() {
   return (
@@ -20,6 +22,12 @@ export default function App() {
           </Route>
           <Route path="/Fibonacci">
             <Fibonacci />
+          </Route>
+          <Route path="/User">
+            <UserOutput />
+          </Route>
+          <Route path="/BasicInputField">
+            <InputAppComponent />
           </Route>
           <Route path="*">
             <h1>Page Not Found</h1>
