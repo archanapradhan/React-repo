@@ -32,6 +32,9 @@ class ListPages extends Component {
           <li>
             <Link to="/login-oauth2">login</Link>
           </li>
+          <li>
+            <Link to="/theme">theme</Link>
+          </li>
         </ul>
       </div>
     );

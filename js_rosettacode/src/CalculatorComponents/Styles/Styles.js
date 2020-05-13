@@ -1,7 +1,7 @@
 //  If you would like to use the same fonts you can import the following into your public/index.html file.
 //  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" />
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CalculatorStyles = styled.div`
   background-color: #4abdac;
@@ -10,8 +10,8 @@ export const CalculatorStyles = styled.div`
   display: grid;
   justify-items: center;
   grid-template-areas:
-    'display'
-    'numbers';
+    "display"
+    "numbers";
   button {
     width: 100%;
     height: 80px;
@@ -19,14 +19,14 @@ export const CalculatorStyles = styled.div`
     border: 3px solid white;
     font-size: 2rem;
     color: white;
-    font-family: 'Orbitron', serif;
+    font-family: "Orbitron", serif;
     background: #e17055;
     &:focus {
       outline: none;
     }
   }
   .display {
-    font-family: 'Orbitron', serif;
+    font-family: "Orbitron", serif;
     font-weight: 700;
     grid-area: display;
     h1 {
