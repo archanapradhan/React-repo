@@ -5,11 +5,11 @@ class ListPages extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <h1>Pages</h1>
+      <div className="my-4">
+        <h1>List of Pages</h1>
         <ul>
           <li>
-            <a href="/pi-calculator">PI Calculator</a>
+            <Link to="/piCalculator">PI Calculator</Link>
           </li>
           <li>
             <Link to="/fibonacci">Fibonacci</Link>
@@ -22,6 +22,9 @@ class ListPages extends Component {
           </li>
           <li>
             <Link to="/BasicInputField">InputField</Link>
+          </li>
+          <li>
+            <Link to="/bubble-sort">Bubble Sort</Link>
           </li>
           <li>
             <Link to="/login-backend">login</Link>

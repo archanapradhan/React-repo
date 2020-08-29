@@ -3,14 +3,14 @@ import React, { Component } from "react";
 class Fibonacci extends Component {
   state = {
     input: "",
-    output: ""
+    output: "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({ input: e.target.value });
   };
 
-  fibonacci = n => {
+  fibonacci = (n) => {
     if (n === 1) {
       return [0, 1];
     } else {
@@ -28,9 +28,9 @@ class Fibonacci extends Component {
     if (specific === undefined) {
     } else {
       var count = series.length;
-      series = series.filter(x => x > series[count - 1 - specific]);
+      series = series.filter((x) => x > series[count - 1 - specific]);
     }
-    series = series.map(x => " " + x + "|");
+    series = series.map((x) => " " + x + "|");
     this.setState({ output: series });
   };
 
@@ -49,6 +49,7 @@ class Fibonacci extends Component {
         <label>
           Generate the whole series{" "}
           <button
+            className="btn btn-info"
             onClick={() => this.getLastOfFibonacciSeries(this.state.input - 1)}
           >
             Generate
@@ -58,6 +59,7 @@ class Fibonacci extends Component {
         <label>
           show the last five in the series{" "}
           <button
+            className="btn  btn-info"
             onClick={() =>
               this.getLastOfFibonacciSeries(this.state.input - 1, 5)
             }
