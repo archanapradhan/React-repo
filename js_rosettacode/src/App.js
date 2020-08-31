@@ -9,6 +9,7 @@ import UserOutput from "./CourseExercises/User/UserOutput";
 import InputAppComponent from "./CourseExercises/Input/InputAppComponent";
 import Themes from "./Pages/Themes";
 import BubbleSort from "./sorting/BubbleSort";
+import QuickSort from "./sorting/QuickSort";
 
 export default function App() {
   return (
@@ -35,6 +36,9 @@ export default function App() {
             </Route>
             <Route path="/bubble-sort">
               <BubbleSort />
+            </Route>
+            <Route path="/quick-sort">
+              <QuickSort />
             </Route>
             <Route path="/BasicInputField">
               <InputAppComponent />
