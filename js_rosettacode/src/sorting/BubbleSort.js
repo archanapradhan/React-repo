@@ -29,7 +29,23 @@ class BubbleSort extends Component {
         }
       }
     }
+    this.setState({ sorted: arr.join(" , ") });
+  };
 
+  bubbleSort2Handler = () => {
+    let arr = this.state.userInput.split(",").map(Number);
+    let flag = true;
+    if (arr.length !== 0) {
+      while (flag) {
+        flag = false;
+        for (let index = 0; index < arr.length; index++) {
+          if (arr[index] > arr[index + 1]) {
+            this.swap(arr, index, index + 1);
+            flag = true;
+          }
+        }
+      }
+    }
     this.setState({ sorted: arr.join(" , ") });
   };
 
