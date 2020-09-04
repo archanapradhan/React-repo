@@ -7,7 +7,7 @@ import PiCal from "./Pages/PiCalculator";
 import Fibonacci from "./Pages/Fibonacci";
 import UserOutput from "./CourseExercises/User/UserOutput";
 import InputAppComponent from "./CourseExercises/Input/InputAppComponent";
-import Themes from "./Pages/Themes";
+//import Themes from "./Pages/Themes";
 import BubbleSort from "./sorting/BubbleSort";
 import QuickSort from "./sorting/QuickSort";
 import InvertBinaryTree from "./Algorithms/InvertBinaryTree";
@@ -49,9 +49,7 @@ class App extends Component {
               <Route path="/BasicInputField">
                 <InputAppComponent />
               </Route>
-              <Route path="/theme">
-                <Themes />
-              </Route>
+              <Route path="/theme">{/* <Themes /> */}</Route>
               <Route path="*">
                 <h1>Page Not Found</h1>
               </Route>
