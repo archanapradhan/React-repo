@@ -4,10 +4,10 @@ import Char from "./Char";
 
 class InputAppComponent extends Component {
   state = {
-    userInput: ""
+    userInput: "",
   };
 
-  inputChangedHandler = event => {
+  inputChangedHandler = (event) => {
     this.setState({ userInput: event.target.value });
   };
 
@@ -26,12 +26,12 @@ class InputAppComponent extends Component {
         <Char
           character={ch}
           key={index}
-          clicked={event => this.deleteCharHandler(event, index)}
+          clicked={(event) => this.deleteCharHandler(event, index)}
         />
       );
     });
     return (
-      <div classname="d-inline-flex p-2">
+      <div className="d-inline-flex p-2">
         <hr />
         <label className="h3 bg-success">Write a text in the field below</label>
         <hr />

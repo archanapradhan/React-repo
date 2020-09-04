@@ -33,6 +33,9 @@ class ListPages extends Component {
               <Link to="/quick-sort">Quick Sort</Link>
             </li>
             <li>
+              <Link to="/invert-binary-tree">Invert Binary Tree</Link>
+            </li>
+            <li>
               <Link to="/login-backend">login</Link>
             </li>
             <li>

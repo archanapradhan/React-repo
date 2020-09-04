@@ -7,51 +7,58 @@ import PiCal from "./Pages/PiCalculator";
 import Fibonacci from "./Pages/Fibonacci";
 import UserOutput from "./CourseExercises/User/UserOutput";
 import InputAppComponent from "./CourseExercises/Input/InputAppComponent";
-import Themes from "./Pages/Themes";
+//import Themes from "./Pages/Themes";
 import BubbleSort from "./sorting/BubbleSort";
 import QuickSort from "./sorting/QuickSort";
+import InvertBinaryTree from "./Algorithms/InvertBinaryTree";
 
-export default function App() {
-  return (
-    <Router>
-      <div className="mx-auto m-5 p-2" style={{ width: "850px" }}>
-        {/* A <Switch> looks through its children <Route>s and
+class App extends Component {
+  state = {};
+  render() {
+    return (
+      <Router>
+        <div className="mx-auto m-5 p-2" style={{ width: "850px" }}>
+          {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Link to="/" className="text-center m-2">
-          <button className="btn btn-primary">Home </button>
-        </Link>
-        <div className="my-5 p-2">
-          <Switch>
-            <Route path="/" exact={true}>
-              <ListPages />
-            </Route>
-            <Route path="/piCalculator">
-              <PiCal />
-            </Route>
-            <Route path="/Fibonacci">
-              <Fibonacci />
-            </Route>
-            <Route path="/User">
-              <UserOutput />
-            </Route>
-            <Route path="/bubble-sort">
-              <BubbleSort />
-            </Route>
-            <Route path="/quick-sort">
-              <QuickSort />
-            </Route>
-            <Route path="/BasicInputField">
-              <InputAppComponent />
-            </Route>
-            <Route path="/theme">
-              <Themes />
-            </Route>
-            <Route path="*">
-              <h1>Page Not Found</h1>
-            </Route>
-          </Switch>
+          <Link to="/" className="text-center m-2">
+            <button className="btn btn-primary">Home </button>
+          </Link>
+          <div className="my-5 p-2">
+            <Switch>
+              <Route path="/" exact={true}>
+                <ListPages />
+              </Route>
+              <Route path="/piCalculator">
+                <PiCal />
+              </Route>
+              <Route path="/Fibonacci">
+                <Fibonacci />
+              </Route>
+              <Route path="/User">
+                <UserOutput />
+              </Route>
+              <Route path="/bubble-sort">
+                <BubbleSort />
+              </Route>
+              <Route path="/quick-sort">
+                <QuickSort />
+              </Route>
+              <Route path="/invert-binary-tree">
+                <InvertBinaryTree />
+              </Route>
+              <Route path="/BasicInputField">
+                <InputAppComponent />
+              </Route>
+              <Route path="/theme">{/* <Themes /> */}</Route>
+              <Route path="*">
+                <h1>Page Not Found</h1>
+              </Route>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
-  );
+      </Router>
+    );
+  }
 }
+
+export default App;
