@@ -3,7 +3,7 @@ This repository consists of two projects.
 1)counter-app
 2)js_rosettacode
 
-##counter-app
+## counter-app
 This project is created with create-react-app template and covers basic concepts of react.
 -jsx
 -rendering elements
@@ -13,7 +13,7 @@ This project is created with create-react-app template and covers basic concepts
 -lists and keys
 
 
-##js_rosettacode
+## js_rosettacode
 js_rosettacode project is a collection of solutions to common tasks that can be achieved through any programming language.
 Here I have approached those same tasks with javascript programs.
 
